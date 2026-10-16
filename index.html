@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hayya privacy policy</title>
+<meta name="description" content="What the Hayya prayer times app stores and why.">
+<link rel="alternate" hreflang="ar" href="ar.html">
+<style>
+:root{color-scheme:light dark;--bg:#F7F3E8;--fg:#1F2A1F;--muted:#5B6657;--accent:#226B4C;--line:#E2DCCB;--card:#FFFFFF}
+@media (prefers-color-scheme:dark){:root{--bg:#0F1828;--fg:#E8E6DF;--muted:#A7B0A3;--accent:#6FC49A;--line:#26344F;--card:#17223A}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans","Noto Naskh Arabic",Tahoma,sans-serif}
+main{max-width:42rem;margin:0 auto;padding:24px 16px 64px}
+nav{display:flex;justify-content:flex-end;margin-bottom:8px}
+nav a{font-weight:600}
+h1{font-size:1.75rem;line-height:1.3;margin:0 0 .5rem}
+h2{font-size:1.2rem;margin:2rem 0 .5rem;padding-top:1rem;border-top:1px solid var(--line)}
+a{color:var(--accent);overflow-wrap:anywhere}
+ul{padding-inline-start:1.25rem}
+li{margin:.35rem 0}
+.table{overflow-x:auto;margin:1rem 0}
+table{border-collapse:collapse;width:100%;background:var(--card);border-radius:8px;font-size:.95rem}
+th,td{text-align:start;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--line)}
+th{color:var(--muted);font-weight:600}
+tr:last-child td{border-bottom:0}
+@media (max-width:520px){table,thead,tbody,tr,th,td{display:block}thead{display:none}tr{border-bottom:1px solid var(--line);padding:6px 0}td{border:0;padding:4px 12px}td:first-child{font-weight:700;padding-top:10px}}
+</style>
+</head>
+<body>
+<main>
+<nav><a href="ar.html" lang="ar">العربية</a></nav>
+<h1 id="hayya-privacy-policy">Hayya privacy policy</h1>
+<p><strong>Effective date: 16 October 2026</strong></p>
+<p>Hayya (حيّ) shows prayer times, the Qibla direction and a prayer tracker. It has no accounts, no ads, no analytics and no crash reporting. Everything it saves stays on your device. The only exception is looking up place names, described below.</p>
+<h2 id="what-hayya-stores-on-your-device">What Hayya stores on your device</h2>
+<ul>
+<li><strong>Your location</strong>: the approximate coordinates of your last location fix, or the city you chose by hand, with the city and country names (in English and Arabic). Hayya uses them to calculate prayer times and the Qibla direction, and to show where you are.</li>
+<li><strong>Your settings</strong>: language, numerals, 12/24-hour clock, theme, prayer calculation method, Asr method, high-latitude rule, Hijri date adjustment, and which adhan notifications and reminders are on.</li>
+<li><strong>Your prayer tracker</strong>: which prayers you marked as prayed on each day, the date you started tracking, and your missed (qada) prayer counts.</li>
+<li><strong>Scheduled notifications</strong>: the upcoming adhan and reminder times, so the system can show them on time and restore them after a restart.</li>
+</ul>
+<p>Hayya does not send any of this to us or to anyone else. We don't run a server, and the Android app doesn't even have permission to use the internet.</p>
+<h2 id="the-exception-place-names">The exception: place names</h2>
+<p>To turn coordinates into a city name ("Cairo, Egypt"), and to find a city when you search for one, Hayya uses your phone's built-in geocoding service. On Android this is provided by Google (through Google Play services), and it sends the request over the internet:</p>
+<ul>
+<li>after a location fix: the approximate coordinates, once for the English name and once for the Arabic one;</li>
+<li>when you search for a city: the text you typed.</li>
+</ul>
+<p>Hayya doesn't add anything else to these requests, and we never see them. Google handles them under its own privacy policy (<a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>). If geocoding fails, for example when you're offline, Hayya still works and keeps the last names it had.</p>
+<p>Your phone's location service may also use Wi-Fi and mobile networks to find your position. That is part of Android and follows your device's location settings, not Hayya.</p>
+<h2 id="backups">Backups</h2>
+<p>If Android backup is turned on, Android may back up Hayya's data (the location, settings and tracker described above) to <strong>your own Google account</strong> and restore it when you reinstall Hayya or set up a new phone. It may also copy it directly when you move to a new phone. This is Android's backup service: Google stores the backup, we can't access it, and you control it in your phone's settings (usually Settings → Google → Backup). Google says these backups are encrypted, and on Android 9 and later end-to-end encrypted with your screen lock when you have one.</p>
+<h2 id="permissions">Permissions</h2>
+<p>Hayya asks for these permissions on Android:</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Permission</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Approximate location</td>
+<td>To calculate prayer times and the Qibla direction for where you are. Hayya never asks for precise location. You can refuse and choose a city instead.</td>
+</tr>
+<tr>
+<td>Notifications</td>
+<td>To play the adhan and show reminders at prayer times.</td>
+</tr>
+<tr>
+<td>Alarms &amp; reminders</td>
+<td>To show the adhan exactly on time. Without it, notifications may arrive a few minutes late.</td>
+</tr>
+<tr>
+<td>Run at startup</td>
+<td>To set the adhan notifications again after your phone restarts.</td>
+</tr>
+<tr>
+<td>Vibration</td>
+<td>For notifications.</td>
+</tr>
+<tr>
+<td>Background work (keep awake, foreground service, network state)</td>
+<td>These come with Android's WorkManager library, which Hayya uses once a day to plan upcoming adhans. That task uses only the location you saved; it never locates you or uses the network.</td>
+</tr>
+</tbody>
+</table></div>
+<p>The Qibla compass uses your phone's motion sensors. Their readings are used live and never saved.</p>
+<h2 id="children">Children</h2>
+<p>Hayya is for everyone and isn't aimed at children in particular. It doesn't collect personal information from anyone, including children.</p>
+<h2 id="deleting-your-data">Deleting your data</h2>
+<p>Everything Hayya saves is on your device, so you can delete it yourself:</p>
+<ul>
+<li><strong>Uninstall Hayya</strong>, or</li>
+<li><strong>Clear its data</strong>: Settings → Apps → Hayya → Storage → Clear data.</li>
+</ul>
+<p>To remove an Android backup as well, delete it from your Google account (Google Drive → Backups, or your phone's backup settings).</p>
+<h2 id="changes">Changes</h2>
+<p>If this policy changes, we'll update it here and change the effective date.</p>
+<h2 id="contact">Contact</h2>
+<p>Questions about this policy: <a href="mailto:ahm761171@gmail.com">ahm761171@gmail.com</a></p>
+</main>
+</body>
+</html>
